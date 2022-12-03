@@ -1,0 +1,23 @@
+
+
+h1 {
+    font-size: 50px;
+    color:aquamarine
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {padding: 20px;}
+
+ul li a {text-decoration: none;}
+
+nav { background-color: aliceblue; margin: 0px;}
+
+main {
+    padding: 20px;
+}

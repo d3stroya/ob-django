@@ -1,0 +1,40 @@
+<!-- Contenido común más bloques que se rellenarán con las otras plantillas -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        {% block styles %}{% endblock styles %}
+    </head>
+    <body>
+        <nav>
+            <li><a href="#">Logo</a></li>
+            <li><a href="#">Herencia</a></li>
+            <li><a href="#">Ejemplo</a></li>
+            <li><a href="#">Otra</a></li>
+        </nav>
+
+        <main>
+            <h1>Herencia de plantillas</h1>
+            <p>{% lorem 1 b random %}</p>
+            {% block content %}{% endblock content %}
+        </main>
+
+        <footer>
+            <p>Todos los derechos reservados</p>
+        </footer>
+        
+        {% block scripts %}{% endblock scripts %}
+    </body>
+</html>
