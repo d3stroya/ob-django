@@ -15,4 +15,4 @@ Vamos a crear una página con 2 rutas:
 7. Añadimos los directorios layouts y partials
 8. Creamos un base.html dentro de layouts
 9. Añadimos el código html en base.html y definimos los bloques y los includes
-10. Definimos algunos estilos
+10. Vamos añadiendo el código en cada plantilla y algunos estilos.
