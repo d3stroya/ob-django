@@ -12,5 +12,6 @@ def dinamico(request, name):
 
     return render(request, 'dinamico.html', context)
 
-def categories(request):
-    pass
+def simple(request, color):
+    context = { 'color': color }
+    return render(request, 'simple.html', context)

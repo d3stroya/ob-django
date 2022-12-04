@@ -1,0 +1,14 @@
+{% extends './layouts/base.html' %}
+
+{% block title %}Ejemplo{% endblock title%}
+
+{% block posttitle %}<h2>Un ejemplo de herencia</h2>{% endblock posttitle %}
+{% block content %}
+<div class="container pb-5">
+    <p>{% lorem 7 p random %}</p>
+    <button type="button" class="btn btn-danger"><i class="bi bi-pin-angle"></i></button>
+    <button type="button" class="btn btn-success"><i class="bi bi-share"></i></button>
+    <button type="button" class="btn btn-primary"><i class="bi bi-hand-thumbs-up"></i></button>
+    <button type="button" class="btn btn-warning"><i class="bi bi-hand-thumbs-down"></i></button>
+</div>
+{% endblock content %}

@@ -1,11 +1,16 @@
 <!-- Hereda de base y añade nuevo contenido -->
-
 {% extends './layouts/base.html' %}
 
+{% load static %}
+
+{% block styles %}<link rel="stylesheet" href="{% static "herencia.css" %}">{% endblock styles %}
+    
 {% block title %}Herencia{% endblock title %}
 
+{% block posttitle %}
+    <h2>Cómo crear jerarquías en Django</h2>
+{% endblock posttitle %}
+
 {% block content %}
-    <h2>Herencia</h2>
-    Content:
-    {% lorem 3 p random %}
+    {% lorem 5 p random %}
 {% endblock content %}
