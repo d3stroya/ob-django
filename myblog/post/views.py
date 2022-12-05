@@ -54,3 +54,13 @@ def queries(request):
         }
         )
 
+def update(request):
+    authorUpdate = Author.objects.get(id=1)
+
+    # Modificamos el objeto
+    authorUpdate.name = 'Franky'
+    authorUpdate.email = 'fdoyle@ww.com'
+    authorUpdate.save()
+
+    return HttpResponse("Autor actualizado correctamente.")
+

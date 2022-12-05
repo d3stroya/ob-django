@@ -22,3 +22,8 @@ author = models.ForeignKey(Author, on_delete=models.CASCADE)
  4. Pintamos los datos en el html
 
 Más info: https://docs.djangoproject.com/en/4.1/topics/db/queries/
+
+# Actualizar datos
+Son dos pasos:
+1. Modificar los datos
+2. Guardar el objeto en la BD
