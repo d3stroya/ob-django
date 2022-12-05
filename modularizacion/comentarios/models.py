@@ -1,7 +1,7 @@
 from django.db import models
 from django.forms import DateField
 
-class comments(models.Model):
+class Comment(models.Model):
     # Definimos los atributos de la clase
     name = models.CharField(max_length=250, null=False)
     score = models.IntegerField(default=3)
@@ -17,7 +17,7 @@ class comments(models.Model):
     def __str__(self):
         return self.name
 
-class author(models.Model):
+class Author(models.Model):
     name = models.CharField(max_length=20, null=False)
     lastname = models.CharField(max_length=20, null=True)
     alias = models.CharField(max_length=20, null=False, unique=True)
@@ -27,6 +27,6 @@ class author(models.Model):
     def __str__(self):
         return self.alias
 
-class post(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=50, null=False)
     text = models.TextField(max_length=10000, null=False)

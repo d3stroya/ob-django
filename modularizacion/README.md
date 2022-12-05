@@ -33,3 +33,44 @@ python3 manage.py migrate
 Cada vez que hagamos cambios, tendremos que repetir estas dos indicaciones.
 
 Toda la info de las migraciones se van guardando en db.sqlite3 > django.migrations y en [nombreaplicacion]/migrations
+
+# Comunicar aplicaciones con el proyecto
+1. Creamos un archivo urls.py en la aplicación y añadimos las urls
+2. Definimos las vistas en views.py
+3. Ahora conectamos aplicación y proyecto:
+   1. En urls.py del poryecto, añadimos una ruta que incluya el archivo urls.py de la aplicación:
+   ```
+   path('comentarios/', include('comentarios.urls'))
+   ```
+   2. Ahora podemos acceder a la aplicación desde la ruta (en este caso) /comentarios y a la vista de prueba desde la ruta /comentarios/test
+
+# Crear y borrar objetos
+Para crear:
+1. Creamos una ruta
+2. Importamos el modelo en views.py
+3. Creamos un objeto
+4. Guardamos el comentario en base de datos
+   ```
+    comment = Comment(1, "Franky", 10, "Comentario de prueba")
+    comment.save()
+   ```
+5. También podemos hacerlo en una sola línea
+   ```
+   comment = Comment.objects.create(name="Bridget")
+   ```
+
+Para borrar:
+1. Creamos una ruta
+2. Creamos la vista
+3. Buscamos el objeto que queremos borrar
+   ```
+   comment = Comment.objects.get(id=1)
+   ```
+4. Borramos el objeto
+´´´
+comment.delete()
+```
+5. También podemos borrar el objeto filtrando por alguno de sus atributos:
+```
+Comment.objects.filter(id=2).delete
+```
