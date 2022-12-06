@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('oneToOne/', include('oneToOne.urls')),
-    path('manyToOne/', include('manyToOne.urls'))
+    path('manyToOne/', include('manyToOne.urls')),
+    path('manyToMany/', include('manyToMany.urls'))
 
 ]

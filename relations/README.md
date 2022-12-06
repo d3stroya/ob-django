@@ -3,3 +3,4 @@
 2. Uno a muchos (a través de clave foránea):      reporter = models.models.ForeignKey(Reporter, on_delete=models.CASCADE)
    1. Acceder al uno desde muchos: art1.reporter.first_name
    2. Acceder al muchos desde el 1 (con clase_set): rep1.article_set.all()
+3. Muchos a muchos: definimos la relación en una de las clases con ManyToManyField: publications = models.ManyToManyField(Publication)
