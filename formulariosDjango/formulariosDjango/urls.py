@@ -1,4 +1,4 @@
-"""formularioshtml URL Configuration
+"""formulariosDjango URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -19,9 +19,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get/form', views.getform, name='form'),
-    path('get/goal/', views.getgoal, name='goal'),
-    path('post/form', views.postform, name='postform'),
-    path('post/goal', views.postgoal, name='postgoal'),
+    path('form', views.form, name='name'),
+    path('goal/', views.goal, name='goal'),
+    path('widget/', views.widget, name='widget'),
 
 ]
