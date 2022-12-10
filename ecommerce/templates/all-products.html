@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h2>All products</h2>
+<table class="text-center table">
+    <tr class="table-dark">
+        <th>Product</th>
+        <th>Description</th>
+        <th>Stock</th>
+    </tr>
+
+    {% for product in allProducts %}
+    <tr>
+            <td><b>{{ product.name }}</b></td> 
+            <td>{{ product.description }}</td> 
+            <td>{{ product.stock }}</td>
+        </tr>
+        {% endfor %}
+</table>
+{% endblock content %}
