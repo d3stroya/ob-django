@@ -1,3 +1,10 @@
 {% extends 'layout/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Welcome to your wishlist app</h1>
+<img src="{% static 'img/santa-clause-ge7729eaac_1920.png' %}" width="500" >
 
-<h1>Index</h1>
+<div class="mt-3">
+    <a href="{% url 'create' %}" class="btn btn-action m-3 p-3 rounded-5" role="button">Add product to my wishlist</a>
+</div>
+{% endblock content %}

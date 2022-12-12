@@ -18,3 +18,4 @@ Cada producto tendrá un título, una descripción, un precio, una imagen y un e
 1. Creo el modelo Product
 2. Añado un archivo forms.py para crear un formulario a partir del modelo
 3. Defino las rutas y las vistas
+4. Diseño el frontend en la carpeta templates
