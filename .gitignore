@@ -11,7 +11,4 @@
 # Built Visual Studio Code Extensions
 *.vsix
 
-# Folders to ignore
-herencia/node_modules/
-
-practicaModelado/practicaModelado/settings.py
+/node_modules
