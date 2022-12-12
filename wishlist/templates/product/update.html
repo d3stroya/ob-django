@@ -1,0 +1,12 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<h2>Update a product</h2>
+<form action="{% url 'update' id=id %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update">
+</form>
+
+{% endblock content %}

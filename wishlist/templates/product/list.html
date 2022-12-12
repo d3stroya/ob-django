@@ -1,0 +1,36 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<h2>Your Wish List</h2>
+{% if products|length == 0 %}
+<div class="alert alert-primary mt-5" role="alert">
+  Your wishlist is empty... Add some stuff
+</div>
+{% endif %}
+
+<div class="row mt-5">
+{% for product in products %}
+  <div class="card col-4 m-1" style="width: 18rem;">
+      {% comment %} <img src="{{ product.img }}" class="card-img-top" alt="..."> {% endcomment %}
+      <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <a href="{{ product.link }}" target="_blank" class="btn btn-primary">{{ product.price }}</a>
+        <a href="{% url 'update' id=product.id %}" class="btn btn-warning">Update</a>
+        <a href="{% url 'delete' id=product.id %}" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="position-fixed bottom-0 end-0 mb-4 mx-4">
+    <a href="{% url 'create' %}" class="btn btn-primary m-3 p-3 rounded-5" role="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg>
+    </a>
+</div>
+
+  {% endblock content %}
