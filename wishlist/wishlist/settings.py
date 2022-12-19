@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'wishlist-openbootcamp',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': '1234',
         'PORT': '5432'
     }
 }
