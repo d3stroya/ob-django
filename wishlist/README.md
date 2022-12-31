@@ -3,6 +3,15 @@ Vamos a crear un CRUD con Django que permita añadir productos a una lista de de
 
 Cada producto tendrá un título, una descripción, un precio, una imagen y un enlace.
 
+## Screenshots
+
+![Portada](./static/img/index.png "Portada")
+
+![Añadir un producto](static/img/add.png "Añadir un producto")
+
+![Lista de deseos](static/img/list.png "Lista de deseos")
+
+
 ## Configuraciones iniciales
 1. Creo la aplicación 'product'.
 2. En settings.py: 
