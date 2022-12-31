@@ -1,0 +1,25 @@
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        {{ user_form.first_name }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Username</label>
+        {{ user_form.username }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        {{ profile_form.image }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Bio</label>
+        {{ profile_form.bio }}
+    </div>
+
+    <input type="submit" value="Update">
+</form>

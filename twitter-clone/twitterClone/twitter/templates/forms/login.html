@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5">
+    <h1 class="text-center">Iniciar sesión</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            {{ form.username }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            {{ form.password }}
+        </div>
+        <input type="submit" class="btn btn-primary" value="Sign in">
+    </form>
+    {% if form.errors %}
+        <p>Wrong user or password</p>
+    {% endif %}
+</div>
+{% endblock content %}

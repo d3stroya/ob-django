@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row px-5 py-2">
+        <div class="col-3">
+        {% include 'header.html' %}
+        </div>
+
+            <div class="col-6">
+                {% include 'timeline.html' %}
+            </div>
+            <div class="col-3">
+                {% include 'sidebar.html' %}
+            </div>
+    </div>
+
+{% endblock content %}
